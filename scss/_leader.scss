@@ -1,0 +1,78 @@
+.leader {
+  position: relative;
+  text-align: center;
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+
+    @include breakpoint-up(medium) {
+      display: flex;
+      align-items: center;
+    }
+
+    @include breakpoint-up(large) {
+      width: 65%;
+    }
+  }
+
+  &__content {
+    margin: 1.875rem 1.5rem 0 1.5rem;
+
+    @include breakpoint-up(medium) {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    @include breakpoint-up(large) {
+      position: absolute;
+      width: 50%;
+      background-color: $white;
+      right: 0;
+      bottom: 0;
+      padding: 6.125rem;
+    }
+
+    & h2 {
+      max-width: 26rem;
+      margin: 0 auto;
+
+      @include breakpoint-up(medium) {
+        margin: 0 auto 0 0;
+      }
+    }
+
+    & p {
+      max-width: 31.25rem;
+      color: $veryDarkGray;
+      font-size: 1rem;
+      line-height: 1.2;
+
+      @include breakpoint-up(medium) {
+        font-size: 1.125rem;
+      }
+
+      @include breakpoint-up(large) {
+        font-size: 1.25rem;
+        max-width: none;
+      }
+    }
+  }
+
+  @include breakpoint-up(medium) {
+    text-align: left;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+  }
+
+  @include breakpoint-up(large) {
+    display: flex;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
+  }
+}
